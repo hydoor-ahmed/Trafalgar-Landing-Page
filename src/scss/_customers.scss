@@ -1,0 +1,111 @@
+.customers {
+  padding-top: 100px;
+
+  .container {
+    color: white;
+
+    .boxs-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(to right, $gcolor-one, $gcolor-tow);
+      padding: 40px 70px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      @media (max-width: 428px) {
+        padding: 30px 20px;
+      }
+
+      .title {
+        margin-bottom: 40px;
+        h1 {
+          position: relative;
+          font-size: 30px;
+          @media ($mobileM) {
+            margin: 10px 0;
+            font-size: 28px;
+          }
+
+          &::after {
+            content: '';
+            background: white;
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            width: 40px;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media ($mobileM) {
+          flex-direction: column;
+        }
+
+        .acc {
+          display: flex;
+          align-items: center;
+          width: 50%;
+          @media ($mobileM) {
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: 20px;
+          }
+
+          img {
+            width: 100px;
+          }
+          .acc_txt {
+            margin-left: 20px;
+            text-align: left;
+            @media ($mobileM) {
+              text-align: center;
+              margin-left: 0;
+              margin-top: 10px;
+            }
+
+            h1 {
+              margin: 0;
+              font-size: 18px;
+              margin-bottom: 5px;
+            }
+            p {
+              font-weight: lighter;
+              font-size: 15px;
+            }
+          }
+        }
+        .text {
+          margin-left: auto;
+          width: 50%;
+          text-align: left;
+          @media ($mobileM) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .arrows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i:first-child {
+        color: rgba(69, 143, 246, 0.58);
+      }
+      i:last-child {
+        background: rgb(228, 79, 79);
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.landing {
+  > img {
+    position: absolute;
+    left: 0;
+    top: 128px;
+    width: 65px;
+  }
+  .container {
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media ($mobileM) {
+      justify-content: center;
+    }
+
+    .txt {
+      @media ($mobileM) {
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        @media ($mobileM) {
+          font-size: 35px;
+        }
+      }
+      p {
+        color: $pcolor;
+        max-width: 343px;
+      }
+      a {
+        background: $blue;
+        color: white;
+        padding: 15px 24px;
+        border-radius: 30px;
+        display: block;
+        width: fit-content;
+        margin-top: 30px;
+        @media ($mobileM) {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+      }
+    }
+    .image {
+      width: 50%;
+      @media ($mobileM) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

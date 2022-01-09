@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+@import "vars";
+@import "navbar";
+@import "landing";
+@import "services";
+@import "leading-section";
+@import "mobileApp";
+@import "customers";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Mulish", sans-serif;
+  height: 9000px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+// Go To Top Arrow Style
+.top-arrow {
+  background: $blue;
+  position: fixed;
+  bottom: 39px;
+  right: 29px;
+  color: white;
+  font-size: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: rgba(33, 33, 33, 0.08);
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    transition: all .5s;
+    z-index: -1;
+  }
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  i {
+    display: block;
+    padding: 10px;
+  }
+}

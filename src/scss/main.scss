@@ -55,6 +55,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
   display: none;
+  z-index: 9999;
 
   &::after {
     content: '';

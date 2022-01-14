@@ -732,14 +732,205 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 10px;
+}
+
+.customers .container .arrows i {
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .customers .container .arrows i:first-child {
-  color: rgba(69, 143, 246, 0.58);
+  color: rgba(69, 143, 246, 0.575);
+  margin-right: 10px;
 }
 
 .customers .container .arrows i:last-child {
-  background: #e44f4f;
+  color: #458ff6;
+  margin-left: 10px;
+}
+
+.customers .container .arrows .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.customers .container .arrows .slider span {
+  background: rgba(69, 143, 246, 0.575);
+  padding: 3.4px;
+  margin: 0 8px;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .customers .container .arrows .slider span {
+    margin: 0 5px;
+  }
+}
+
+.customers .container .arrows .slider span:first-child {
+  background: #458ff6;
+}
+
+.articles {
+  padding-top: 100px;
+  position: relative;
+}
+
+.articles .container .title {
+  margin-bottom: 50px;
+}
+
+.articles .container .title h1 {
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.articles .container .title h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: black;
+  width: 48px;
+  height: 2px;
+}
+
+.articles .container > img {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 30%;
+}
+
+.articles .container .boxs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 421px) {
+  .articles .container .boxs {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+.articles .container .boxs .box {
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: 0 0 50px #e5e9f6c4;
+          box-shadow: 0 0 50px #e5e9f6c4;
+  padding-bottom: 15px;
+}
+
+.articles .container .boxs .box img {
+  width: 100%;
+}
+
+.articles .container .boxs .box .box-body {
+  padding: 10px 30px;
+}
+
+.articles .container .boxs .box .box-body h1 {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.articles .container .boxs .box .box-body p {
+  color: #7d7987;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.articles .container .boxs .box .box-body a {
+  color: #458ff6;
+  margin-bottom: 10px;
+}
+
+.articles .container .boxs .box .box-body a i {
+  padding-left: 6px;
+  padding-top: 4px;
+}
+
+footer {
+  background: linear-gradient(45deg, #5a98f2, #67c3f3);
+  margin-top: 170px;
+  padding: 50px 0 0 0;
+}
+
+footer .container {
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 554px) {
+  footer .container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+footer .container .box .logo img {
+  width: 120px;
+}
+
+footer .container .box .logo p {
+  margin: 20px 0;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+footer .container .box .logo span {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+footer .container .box .company h1,
+footer .container .box .region h1,
+footer .container .box .help h1 {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+footer .container .box .company ul li a,
+footer .container .box .region ul li a,
+footer .container .box .help ul li a {
+  display: block;
+  color: white;
+  padding: 5px 0;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+footer img:last-child {
+  width: 80px;
+}
+
+@media (max-width: 1100px) {
+  footer img:last-child {
+    display: none;
+  }
 }
 
 * {
@@ -757,7 +948,6 @@ html {
 
 body {
   font-family: "Mulish", sans-serif;
-  height: 9000px;
 }
 
 .container {

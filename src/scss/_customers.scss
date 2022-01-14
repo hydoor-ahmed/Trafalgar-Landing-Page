@@ -99,12 +99,41 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 10px;
+      $light-blue: rgba(69, 143, 246, 0.575);
 
+      i {
+        font-size: 24px;
+        cursor: pointer;
+      }
       i:first-child {
-        color: rgba(69, 143, 246, 0.58);
+        color: $light-blue;
+        margin-right: 10px;
       }
       i:last-child {
-        background: rgb(228, 79, 79);
+        color: $blue;
+        margin-left: 10px;
+      }
+      .slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          background: $light-blue;
+          // width: 3px;
+          // height: 3px;
+          padding: 3.4px;
+          margin: 0 8px;
+          border-radius: 10px;
+          display: inline-block;
+          cursor: pointer;
+          @media ($mobileM) {
+            margin: 0 5px;
+          }
+        }
+        span:first-child {
+          background: $blue;
+        }
       }
     }
   }

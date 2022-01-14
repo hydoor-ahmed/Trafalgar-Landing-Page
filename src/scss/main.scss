@@ -6,6 +6,8 @@
 @import "leading-section";
 @import "mobileApp";
 @import "customers";
+@import "articles";
+@import "footer";
 
 * {
   padding: 0;
@@ -19,7 +21,6 @@ html {
 }
 body {
   font-family: "Mulish", sans-serif;
-  height: 9000px;
 }
 .container {
   padding-left: 15px;
